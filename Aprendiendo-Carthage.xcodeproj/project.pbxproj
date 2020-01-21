@@ -13,7 +13,26 @@
 		2C6CD4E823D7392300F2A50F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6CD4E623D7392300F2A50F /* Main.storyboard */; };
 		2C6CD4EA23D7392300F2A50F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6CD4E923D7392300F2A50F /* Assets.xcassets */; };
 		2C6CD4ED23D7392300F2A50F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6CD4EB23D7392300F2A50F /* LaunchScreen.storyboard */; };
+		2C6CD4F723D73B3200F2A50F /* DynamicBlurView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6CD4F523D73B3200F2A50F /* DynamicBlurView.framework */; };
+		2C6CD4F823D73B3200F2A50F /* DynamicBlurView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6CD4F523D73B3200F2A50F /* DynamicBlurView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C6CD4F923D73B3200F2A50F /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6CD4F623D73B3200F2A50F /* PopupDialog.framework */; };
+		2C6CD4FA23D73B3200F2A50F /* PopupDialog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6CD4F623D73B3200F2A50F /* PopupDialog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2C6CD4FB23D73B3200F2A50F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2C6CD4F823D73B3200F2A50F /* DynamicBlurView.framework in Embed Frameworks */,
+				2C6CD4FA23D73B3200F2A50F /* PopupDialog.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2C6CD4DD23D7392300F2A50F /* Aprendiendo-Carthage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aprendiendo-Carthage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +43,8 @@
 		2C6CD4E923D7392300F2A50F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C6CD4EC23D7392300F2A50F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C6CD4EE23D7392300F2A50F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C6CD4F523D73B3200F2A50F /* DynamicBlurView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DynamicBlurView.framework; path = Carthage/Build/iOS/DynamicBlurView.framework; sourceTree = "<group>"; };
+		2C6CD4F623D73B3200F2A50F /* PopupDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PopupDialog.framework; path = Carthage/Build/iOS/PopupDialog.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6CD4F723D73B3200F2A50F /* DynamicBlurView.framework in Frameworks */,
+				2C6CD4F923D73B3200F2A50F /* PopupDialog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +65,7 @@
 			children = (
 				2C6CD4DF23D7392300F2A50F /* Aprendiendo-Carthage */,
 				2C6CD4DE23D7392300F2A50F /* Products */,
+				2C6CD4F423D73B3200F2A50F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +91,15 @@
 			path = "Aprendiendo-Carthage";
 			sourceTree = "<group>";
 		};
+		2C6CD4F423D73B3200F2A50F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C6CD4F523D73B3200F2A50F /* DynamicBlurView.framework */,
+				2C6CD4F623D73B3200F2A50F /* PopupDialog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +110,8 @@
 				2C6CD4D923D7392300F2A50F /* Sources */,
 				2C6CD4DA23D7392300F2A50F /* Frameworks */,
 				2C6CD4DB23D7392300F2A50F /* Resources */,
+				2C6CD4FB23D73B3200F2A50F /* Embed Frameworks */,
+				2C6CD4FC23D73B5100F2A50F /* Copy Carthage frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +167,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C6CD4FC23D73B5100F2A50F /* Copy Carthage frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/PopupDialog.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DynamicBlurView.framework",
+			);
+			name = "Copy Carthage frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C6CD4D923D7392300F2A50F /* Sources */ = {
@@ -285,6 +343,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Aprendiendo-Carthage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +364,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Aprendiendo-Carthage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
